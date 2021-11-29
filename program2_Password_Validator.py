@@ -24,6 +24,13 @@ def count_letters(letter_numbers):
         return True 
 
 
+def case_letter_validator(letter_check):
+    for l in letter_check:
+        if l.isupper():
+            return True
+
 password = get_input()
 valid_letter_number = count_letters(password)
+valid_case = case_letter_validator(password)
 print(valid_letter_number)
+print(valid_case)
