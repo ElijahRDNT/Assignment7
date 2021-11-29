@@ -29,8 +29,16 @@ def case_letter_validator(letter_check):
         if l.isupper():
             return True
 
+
+def number_validator(number_check):
+    for n in number_check:
+        if n.isdigit():
+            return True
+
 password = get_input()
 valid_letter_number = count_letters(password)
 valid_case = case_letter_validator(password)
+pass_with_number = number_validator(password)
 print(valid_letter_number)
 print(valid_case)
+print(pass_with_number)
