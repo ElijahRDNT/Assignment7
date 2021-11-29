@@ -23,6 +23,18 @@ def count_words(sentence_word_count):
     return word_count
 
 
+def count_vowels(sentence_vowel_count):
+    vowels = 'aeiou'
+    vowel_number = 0
+
+    for v in sentence_vowel_count.lower():
+        if v in vowels:
+            vowel_number = vowel_number + 1
+
+    return vowel_number
+
 sentence = get_input()
 number_of_words = count_words(sentence)
-print("\n\nWords: " + str(number_of_words))
+number_of_vowels = count_vowels(sentence)
+
+print("\n\nWords: " + str(number_of_words) + "\nVowels: " + str(number_of_vowels))
