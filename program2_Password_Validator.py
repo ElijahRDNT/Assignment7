@@ -35,10 +35,18 @@ def number_validator(number_check):
         if n.isdigit():
             return True
 
+
+def special_char_validation(char_check):
+    for n in char_check:
+        if not n.isdigit() and not n.isalpha() and n != " ":
+            return True
+
 password = get_input()
 valid_letter_number = count_letters(password)
 valid_case = case_letter_validator(password)
 pass_with_number = number_validator(password)
+pass_with_special_char = special_char_validation(password)
 print(valid_letter_number)
 print(valid_case)
 print(pass_with_number)
+print(pass_with_special_char)
