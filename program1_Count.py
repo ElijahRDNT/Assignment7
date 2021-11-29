@@ -33,8 +33,20 @@ def count_vowels(sentence_vowel_count):
 
     return vowel_number
 
+
+def count_consonants(sentence_consonant_count):
+    consonants = 'bcdfghjklmnñpqrstvwxyz'
+    consonant_number = 0
+
+    for c in sentence_consonant_count.lower():
+        if c in consonants:
+            consonant_number = consonant_number + 1
+
+    return consonant_number
+
 sentence = get_input()
 number_of_words = count_words(sentence)
 number_of_vowels = count_vowels(sentence)
+number_of_consonants = count_consonants(sentence)
 
-print("\n\nWords: " + str(number_of_words) + "\nVowels: " + str(number_of_vowels))
+print("\n\nWords: " + str(number_of_words) + "\nVowels: " + str(number_of_vowels) + "\nConsonants: " + str(number_of_consonants) + "\n")
